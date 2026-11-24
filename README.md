@@ -2,6 +2,8 @@
 
 Play 12 MainStage instruments from an Embodme Erae 2 with MPE, per-patch note latching, and synced latch-indicator lights on the Erae surface.
 
+**Demo video:** https://youtu.be/xQWb0LF4U4I
+
 **Status:** working prototype, shared for feedback from Embodme and other Erae 2 / MainStage users.
 
 ## How it fits together
