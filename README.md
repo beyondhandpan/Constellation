@@ -26,10 +26,11 @@ Mac TouchOSC "Bridge" ◄──► iPad TouchOSC panel
 |---|---|
 | `mainstage/scripter_v1_4.js` | Scripter latch script. Paste into each patch's Scripter; change only the `TAG` line. |
 | `touchosc/Bridge_v2.7.tosc` | Mac TouchOSC bridge (connections: 1 Erae, 2 iPad, 3 IAC Bus 1, 4 IAC Bus 2). |
-| `touchosc/iPad_v1.11.tosc` | iPad control panel. |
+| `touchosc/iPad_v1.13.tosc` | iPad control panel, with a BPM readout that greys out when MainStage is stopped. |
+| `mainstage/tempo_sender.js` | Scripter that sends the MainStage tempo and play/stop state to the iPad. |
 | `erae/` | Erae Lab layout exports (Layout 1 and 2). |
-| `docs/` | Erae Lab setup, MainStage setup, Launch Control XL 3 notes. |
-| `tests/scripter_test.js` | Offline test of the latch logic: `node tests/scripter_test.js` |
+| `docs/` | Erae Lab setup, MainStage setup, Launch Control XL 3 notes, master clock/tempo, looper. |
+| `tests/` | Offline tests (run from `tests/`): `node scripter_test.js`, `node tempo_test.js` |
 
 ## Requirements
 
@@ -39,7 +40,9 @@ Embodme Erae 2 (firmware 2.1.3 recommended), Erae Lab, macOS, MainStage 4.3.1, A
 
 - Latching more than about three patches' notes at once can cause audio cutouts with heavy reverbs. Keep three or fewer latched instruments.
 - Erae Lab cannot copy/paste elements or reuse presets between layouts, so each indicator dot is built by hand.
-- Looper control from the Erae is untested.
+- Erae looper tested with Constellation; see `docs/LOOPER.md`. CLEAR ALL with five latched patches did not finish cleanly.
+- The BPM shown on the Erae screen does not update when following an external MainStage clock (the tempo itself follows).
+- Use Bridge v2.7. Older bridges do not send the latch lights.
 
 ## License
 
